@@ -2,6 +2,10 @@ import { User } from './user';
 
 describe('User', () => {
   it('should create an instance', () => {
-    expect(new User()).toBeTruthy();
+    expect(newUser()).toBeTruthy();
   });
 });
+function newUser(): any {
+  throw new Error('Function not implemented.');
+}
+

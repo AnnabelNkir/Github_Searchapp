@@ -7,10 +7,22 @@ import { Injectable } from '@angular/core';
 })
 export class ProfileService {
   // to be moved to environment
-  private username: string;
+  private _username: string;
+  public get username(): string {
+    return this._username;
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
   private token = environment.token;
   private clientId = environment.clientId;
-  private clientSecret = environment.clientSecret;
+  private _clientSecret = environment.clientSecret;
+  public get clientSecret() {
+    return this._clientSecret;
+  }
+  public set clientSecret(value) {
+    this._clientSecret = value;
+  }
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +32,7 @@ export class ProfileService {
   }
 
   getRepoData() {
-   
+    // return this.http.get(`https://api.github.com/users/${this.username}/repos?access_token=${this.token}`);
     return this.http.get(`https://api.github.com/users/${this.username}/repos?${this.clientId}&client_secret=${this.clientSecret}`);
   }
 
