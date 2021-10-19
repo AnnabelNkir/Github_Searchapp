@@ -1,0 +1,69 @@
+form{
+  margin-left: 30%;
+}
+#username {
+  border-color: black;
+  margin-bottom: 10px; 
+  margin-top: 10px;
+  width: 500px;
+  
+}
+
+#user_profile {
+  width: 80%;
+  height: auto;
+  border-radius: 70%;
+
+}
+
+#user_profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 80%;
+}
+
+.following {
+  margin-right: 10%;
+}
+
+.followersnumbers {
+  padding-left: 2%;
+  color: rgb(173, 0, 0);
+}
+
+.repoLabel {
+  margin-top: 6%;
+  
+}
+
+.userInfo {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10%;
+  color: #1731c4;
+
+}
+
+.uname {
+  color: #070225;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+
+.repoLabel h3{
+  color: rgb(58, 6, 13);
+}
+
+.repocards{
+ box-shadow: 5px 5px rgb(41, 22, 111), -1em 0 .8em rgb(51, 8, 206);
+
+}
+
+.repocards h4 span{
+ font-size:12px; 
+ float:right; 
+ color:white;
+ background: rgb(31, 22, 111);
+ background: linear-gradient(90deg, rgb(35, 22, 111) 11%, rgb(49, 29, 29) 89%);
+}

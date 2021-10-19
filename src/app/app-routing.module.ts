@@ -1,14 +1,16 @@
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
+import { LandingComponent } from './component/landing/landing.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 const routes: Routes = [
-  {path: '', component: LandingPageComponent},
-  {path: 'search', component: ProfileComponent},
-  {path: '**', component: NotFoundComponent}
+  { path: '', component: LandingComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: '**', component: NotFoundComponent },
+
+  { path: '', redirectTo: "/profile", pathMatch: "full" },
+
 ];
 
 @NgModule({
